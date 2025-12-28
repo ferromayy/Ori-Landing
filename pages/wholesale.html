@@ -4,7 +4,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Sección Mayoristas - Coffee Shop</title>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
@@ -34,33 +34,64 @@
             },
         }
     </script>
+<style>
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+</style>
 </head>
-<body class="bg-background-dark font-display text-text-main-dark overflow-x-hidden transition-colors duration-200 antialiased">
-    <header class="fixed top-0 left-0 w-full z-50 bg-background-dark/95 backdrop-blur-sm border-b border-transparent border-gray-800 transition-colors duration-300">
-        <div class="max-w-[1920px] mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
-        <div class="flex-shrink-0">
-        <a href="../index.html" class="flex items-center">
-        <img src="../../assets/images/logo.png" alt="NOMAD Logo" class="h-10 lg:h-12 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span class="text-2xl lg:text-3xl font-bold tracking-tight uppercase font-sans" style="display:none;">NOMAD</span>
-        </a>
-        </div>
-        <nav class="hidden lg:flex space-x-8 text-xs font-medium uppercase tracking-widest">
-        <a class="hover:text-gray-500 transition-colors" href="../index.html">Inicio</a>
-        <a class="hover:text-gray-500 transition-colors" href="coffee.html">Cafe</a>
-        <a class="hover:text-gray-500 transition-colors" href="wholesale.html">Mayoristas y asesoramiento</a>
-        <a class="hover:text-gray-500 transition-colors" href="about.html">Nosotros</a>
-        </nav>
-        <div class="flex items-center space-x-4 lg:space-x-6 text-sm font-mono lg:font-sans">
-                <a aria-label="Carrito" class="hover:text-gray-500 transition-colors flex items-center justify-center" href="#">
-                <span class="material-icons-outlined text-2xl">shopping_cart</span>
-                </a>
-        </div>
-        <button class="lg:hidden ml-4">
-        <span class="material-icons-outlined">menu</span>
-        </button>
-        </div>
-        </header>
-<section class="w-full py-16 md:py-24 px-4 sm:px-10 bg-background-dark">
+<body class="bg-white font-display text-gray-900 overflow-x-hidden transition-colors duration-200 antialiased">
+<div class="fixed top-0 left-0 w-full z-[60] bg-blue-600 h-8 overflow-hidden">
+<div class="flex items-center h-full js-promo-banner">
+<div class="flex items-center space-x-8 whitespace-nowrap animate-scroll">
+  <span class="text-xs font-medium text-gray-900"></span>
+  <span class="text-xs font-medium text-gray-900">🎉 Envío gratuito en Cordoba capital por lanzamiento</span>
+  <span class="text-xs font-medium text-gray-900"></span>
+  <span class="text-xs font-medium text-gray-900">📦 Compra ahora y recibe en las proximas 24hs</span>
+  <span class="text-xs font-medium text-gray-900"></span>
+</div>
+<div class="flex items-center space-x-8 whitespace-nowrap animate-scroll" aria-hidden="true">
+  <span class="text-xs font-medium text-gray-900"></span>
+<span class="text-xs font-medium text-gray-900">🎉 Envío gratuito en Cordoba capital por lanzamiento</span>
+<span class="text-xs font-medium text-gray-900"></span>
+<span class="text-xs font-medium text-gray-900">📦 Compra ahora y recibe en las proximas 24hs</span>
+<span class="text-xs font-medium text-gray-900"></span>
+</div>
+</div>
+</div>
+<header class="fixed top-8 left-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-transparent border-gray-200 transition-colors duration-300">
+  <div class="max-w-[1920px] mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
+    <div class="flex-shrink-0">
+    <a href="../index.html" class="flex items-center">
+    <img src="../assets/images/Logo-SinFondo-1 - Editado (1).png" alt="NOMAD Logo" class="h-10 lg:h-12 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <span class="text-2xl lg:text-3xl font-bold tracking-tight uppercase font-sans" style="display:none;">NOMAD</span>
+    </a>
+    </div>
+    <nav class="hidden lg:flex space-x-8 text-xs font-medium uppercase tracking-widest">
+      <a class="text-gray-900 hover:text-gray-600 transition-colors" href="../index.html">Inicio</a>
+      <a class="text-gray-900 hover:text-gray-600 transition-colors" href="coffee.html">Cafe</a>
+      <a class="text-gray-900 hover:text-gray-600 transition-colors" href="wholesale.html">Mayoristas y asesoramiento</a>
+      <a class="text-gray-900 hover:text-gray-600 transition-colors" href="about.html">Nosotros</a>
+    </nav>
+    <div class="flex items-center space-x-4 lg:space-x-6 text-sm font-mono lg:font-sans">
+    <a aria-label="Carrito" class="hover:text-gray-500 transition-colors flex items-center justify-center" href="#">
+    <span class="material-icons-outlined text-2xl">shopping_cart</span>
+    </a>
+    </div>
+    <button class="lg:hidden ml-4">
+    <span class="material-icons-outlined">menu</span>
+    </button>
+    </div>
+</header>
+<section class="w-full py-16 md:py-24 px-4 sm:px-10 bg-white">
 <div class="max-w-[1200px] mx-auto">
 <div class="mb-12">
 <span class="font-mono text-xs uppercase tracking-[0.2em] text-text-secondary-dark">Sección Mayoristas</span>
@@ -104,87 +135,300 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 <label class="flex flex-col gap-2">
 <span class="text-xs font-semibold uppercase tracking-wider text-text-main-dark">Nombre completo</span>
-<input class="w-full rounded border border-border-dark bg-white dark:bg-background-dark text-text-main-dark focus:border-primary focus:ring-0 h-11 px-3 text-sm" placeholder="Juan Pérez" type="text"/>
+<input class="w-full rounded border border-border-dark bg-white dark:bg-white text-text-main-dark focus:border-primary focus:ring-0 h-11 px-3 text-sm" placeholder="Juan Pérez" type="text"/>
 </label>
 <label class="flex flex-col gap-2">
 <span class="text-xs font-semibold uppercase tracking-wider text-text-main-dark">Empresa</span>
-<input class="w-full rounded border border-border-dark bg-white dark:bg-background-dark text-text-main-dark focus:border-primary focus:ring-0 h-11 px-3 text-sm" placeholder="Café del Centro" type="text"/>
+<input class="w-full rounded border border-border-dark bg-white dark:bg-white text-text-main-dark focus:border-primary focus:ring-0 h-11 px-3 text-sm" placeholder="Café del Centro" type="text"/>
 </label>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 <label class="flex flex-col gap-2">
 <span class="text-xs font-semibold uppercase tracking-wider text-text-main-dark">Email</span>
-<input class="w-full rounded border border-border-dark bg-white dark:bg-background-dark text-text-main-dark focus:border-primary focus:ring-0 h-11 px-3 text-sm" placeholder="contacto@tuempresa.com" type="email"/>
+<input class="w-full rounded border border-border-dark bg-white dark:bg-white text-text-main-dark focus:border-primary focus:ring-0 h-11 px-3 text-sm" placeholder="contacto@tuempresa.com" type="email"/>
 </label>
 <label class="flex flex-col gap-2">
 <span class="text-xs font-semibold uppercase tracking-wider text-text-main-dark">Teléfono</span>
-<input class="w-full rounded border border-border-dark bg-white dark:bg-background-dark text-text-main-dark focus:border-primary focus:ring-0 h-11 px-3 text-sm" placeholder="+54 11 ..." type="tel"/>
+<input class="w-full rounded border border-border-dark bg-white dark:bg-white text-text-main-dark focus:border-primary focus:ring-0 h-11 px-3 text-sm" placeholder="+54 11 ..." type="tel"/>
 </label>
 </div>
 <label class="flex flex-col gap-2">
 <span class="text-xs font-semibold uppercase tracking-wider text-text-main-dark">¿Cómo podemos ayudarte?</span>
-<textarea class="w-full rounded border border-border-dark bg-white dark:bg-background-dark text-text-main-dark focus:border-primary focus:ring-0 min-h-[120px] p-3 text-sm resize-y" placeholder="Cuéntanos sobre tu negocio..."></textarea>
+<textarea class="w-full rounded border border-border-dark bg-white dark:bg-white text-text-main-dark focus:border-primary focus:ring-0 min-h-[120px] p-3 text-sm resize-y" placeholder="Cuéntanos sobre tu negocio..."></textarea>
 </label>
-<button class="mt-4 w-full sm:w-auto self-start px-8 h-11 bg-primary text-white text-sm font-bold uppercase tracking-wider rounded hover:bg-[#d56a00] transition-colors" type="submit">
+<button class="mt-4 w-full sm:w-auto self-start px-8 h-11 bg-primary text-gray-900 text-sm font-bold uppercase tracking-wider rounded hover:bg-[#d56a00] transition-colors" type="submit">
                         Enviar Solicitud
                     </button>
 </form>
 </div>
-<div class="w-full md:w-2/5 bg-background-dark text-white p-8 md:p-16 flex flex-col justify-between">
+<div class="w-full md:w-2/5 bg-white text-gray-900 p-8 md:p-16 flex flex-col justify-between">
 <div>
 <h3 class="font-mono text-xs uppercase tracking-[0.2em] mb-8 opacity-70">Contacto Directo</h3>
 <ul class="flex flex-col gap-8">
 <li class="flex flex-col gap-1">
-<p class="text-xs text-gray-400 uppercase tracking-wide">Ventas Mayoristas</p>
+<p class="text-xs text-gray-600 uppercase tracking-wide">Ventas Mayoristas</p>
 <a class="font-medium hover:text-primary transition-colors text-lg" href="mailto:mayoristas@coffeeshop.com">mayoristas@coffeeshop.com</a>
 </li>
 <li class="flex flex-col gap-1">
-<p class="text-xs text-gray-400 uppercase tracking-wide">Teléfono</p>
+<p class="text-xs text-gray-600 uppercase tracking-wide">Teléfono</p>
 <a class="font-medium hover:text-primary transition-colors text-lg" href="tel:+1234567890">+1 (555) 123-4567</a>
 </li>
 <li class="flex flex-col gap-1">
-<p class="text-xs text-gray-400 uppercase tracking-wide">Oficina Central</p>
+<p class="text-xs text-gray-600 uppercase tracking-wide">Oficina Central</p>
 <span class="font-medium text-lg leading-snug">Av. del Libertador 1234<br/>Buenos Aires, Argentina</span>
 </li>
 </ul>
 </div>
 <div class="mt-12">
-<p class="text-sm text-gray-400 italic">"El secreto de un gran negocio empieza con un gran café."</p>
+<p class="text-sm text-gray-600 italic">"El secreto de un gran negocio empieza con un gran café."</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<footer class="bg-background-dark/50 mt-16 py-12">
+<footer class="bg-white/50 mt-16 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-10 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="flex flex-col">
-    <h3 class="font-bold text-lg mb-4 text-text-dark">Navegación</h3>
-    <a class="text-text-dark/80 hover:text-primary transition-colors py-1" href="coffee.html">Cafe</a>
-    <a class="text-text-dark/80 hover:text-primary transition-colors py-1" href="wholesale.html">Mayoristas y asesoramiento</a>
-    <a class="text-text-dark/80 hover:text-primary transition-colors py-1" href="about.html">Nosotros</a>
-    <a class="text-text-dark/80 hover:text-primary transition-colors py-1" href="shop/index.html">Tienda</a>
+    <h3 class="font-bold text-lg mb-4 text-gray-900">Navegación</h3>
+    <a class="text-gray-900/80 hover:text-primary transition-colors py-1" href="coffee.html">Cafe</a>
+    <a class="text-gray-900/80 hover:text-primary transition-colors py-1" href="wholesale.html">Mayoristas y asesoramiento</a>
+    <a class="text-gray-900/80 hover:text-primary transition-colors py-1" href="about.html">Nosotros</a>
+    <a class="text-gray-900/80 hover:text-primary transition-colors py-1" href="shop/index.html">Tienda</a>
     </div>
     <div class="flex flex-col">
-    <h3 class="font-bold text-lg mb-4 text-text-dark">Contacto</h3>
-    <p class="text-text-dark/80 py-1">123 Calle Falsa, Primavera, CA 12345</p>
-    <p class="text-text-dark/80 py-1">hola@cafearoma.com</p>
-    <p class="text-text-dark/80 py-1">(123) 456-7890</p>
+    <h3 class="font-bold text-lg mb-4 text-gray-900">Contacto</h3>
+<!-- <p class="text-gray-900/80 py-1">123 Calle Falsa, Primavera, CA 12345</p> -->
+<p class="text-gray-900/80 py-1">oritostadores@gmail.com</p>
+<p class="text-gray-900/80 py-1">+54 9 3518 01-4893</p>
     </div>
     <div class="flex flex-col">
-    <h3 class="font-bold text-lg mb-4 text-text-dark">Síguenos</h3>
+    <h3 class="font-bold text-lg mb-4 text-gray-900">Síguenos</h3>
     <div class="flex space-x-4">
-    <a class="text-text-dark/80 hover:text-primary transition-colors" href="#">
+    <a class="text-gray-900/80 hover:text-primary transition-colors" href="#">
     <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
     </a>
-    <a class="text-text-dark/80 hover:text-primary transition-colors" href="#">
+    <a class="text-gray-900/80 hover:text-primary transition-colors" href="#">
     <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98C23.986 15.667 24 15.259 24 12s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"></path></svg>
     </a>
     </div>
     </div>
     </div>
     </footer>
-<a class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#128C7E] transition-colors z-50" href="https://wa.me/1234567890" rel="noopener noreferrer" target="_blank">
+<!-- Modal del Carrito -->
+<div class="fixed inset-0 z-[100] hidden js-cart-modal">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="document.querySelector('.js-cart-modal').classList.add('hidden')"></div>
+<div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl overflow-y-auto">
+<div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between z-10">
+<h2 class="text-xl font-bold uppercase text-gray-900">Carrito</h2>
+<button class="text-gray-600 hover:text-gray-900 transition-colors js-cart-close" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</button>
+</div>
+<div class="p-6 js-cart-items">
+<p class="text-gray-600 text-center py-8">Tu carrito está vacío</p>
+</div>
+<div class="sticky bottom-0 bg-white border-t border-gray-200 p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="text-gray-600 uppercase text-sm">Total:</span>
+<span class="text-xl font-bold text-gray-900 js-cart-total">$0</span>
+</div>
+<button class="w-full bg-white text-black font-medium py-3 rounded-full hover:bg-gray-200 transition-colors uppercase tracking-wide text-sm js-checkout-whatsapp">
+Finalizar compra por WhatsApp
+</button>
+</div>
+</div>
+</div>
+
+<script>
+// Sistema de Carrito (mismo código que en las otras páginas)
+class Cart {
+  constructor() {
+    this.items = this.loadCart();
+    this.updateCartUI();
+  }
+
+  loadCart() {
+    const cart = localStorage.getItem('cart');
+    return cart ? JSON.parse(cart) : [];
+  }
+
+  saveCart() {
+    localStorage.setItem('cart', JSON.stringify(this.items));
+    this.updateCartUI();
+  }
+
+  addItem(product) {
+    const item = {
+      id: `${product.productId}-${product.size}-${product.grind}`,
+      productId: product.productId,
+      name: product.name,
+      size: product.size,
+      grind: product.grind,
+      quantity: product.quantity,
+      price: product.price,
+      total: product.price * product.quantity
+    };
+    
+    const existingIndex = this.items.findIndex(i => i.id === item.id);
+    if (existingIndex >= 0) {
+      this.items[existingIndex].quantity += item.quantity;
+      this.items[existingIndex].total = this.items[existingIndex].price * this.items[existingIndex].quantity;
+    } else {
+      this.items.push(item);
+    }
+    
+    this.saveCart();
+  }
+
+  removeItem(itemId) {
+    this.items = this.items.filter(item => item.id !== itemId);
+    this.saveCart();
+  }
+
+  updateQuantity(itemId, quantity) {
+    const item = this.items.find(i => i.id === itemId);
+    if (item) {
+      item.quantity = quantity;
+      item.total = item.price * quantity;
+      this.saveCart();
+    }
+  }
+
+  getTotal() {
+    return this.items.reduce((sum, item) => sum + item.total, 0);
+  }
+
+  getItemCount() {
+    return this.items.reduce((sum, item) => sum + item.quantity, 0);
+  }
+
+  updateCartUI() {
+    const cartCount = document.querySelector('.js-cart-count');
+    const cartItems = document.querySelector('.js-cart-items');
+    const cartTotal = document.querySelector('.js-cart-total');
+    
+    if (cartCount) {
+      const count = this.getItemCount();
+      if (count > 0) {
+        cartCount.textContent = count;
+        cartCount.style.display = 'flex';
+      } else {
+        cartCount.style.display = 'none';
+      }
+    }
+    
+    if (cartItems) {
+      if (this.items.length === 0) {
+        cartItems.innerHTML = '<p class="text-gray-600 text-center py-8">Tu carrito está vacío</p>';
+      } else {
+        cartItems.innerHTML = this.items.map(item => `
+          <div class="border-b border-gray-200 pb-4 mb-4">
+            <div class="flex justify-between items-start mb-2">
+              <div class="flex-1">
+                <h3 class="font-medium mb-1 text-gray-900">${item.name}</h3>
+                <p class="text-xs text-gray-600">${item.size === 250 ? '250gr' : '1kg'} - ${item.grind || 'Sin molienda'}</p>
+              </div>
+              <button class="text-gray-600 hover:text-gray-900 js-remove-item" data-item-id="${item.id}" type="button">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <button class="w-6 h-6 flex items-center justify-center border border-gray-300 hover:bg-gray-100 text-gray-700 js-decrease-qty" data-item-id="${item.id}" type="button">-</button>
+                <span class="text-sm text-gray-900">${item.quantity}</span>
+                <button class="w-6 h-6 flex items-center justify-center border border-gray-300 hover:bg-gray-100 text-gray-700 js-increase-qty" data-item-id="${item.id}" type="button">+</button>
+              </div>
+              <span class="font-medium text-gray-900">$${item.total.toLocaleString('es-AR')}</span>
+            </div>
+          </div>
+        `).join('');
+        
+        cartItems.querySelectorAll('.js-remove-item').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            cart.removeItem(e.target.closest('[data-item-id]').dataset.itemId);
+          });
+        });
+        
+        cartItems.querySelectorAll('.js-decrease-qty').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const itemId = e.target.closest('[data-item-id]').dataset.itemId;
+            const item = cart.items.find(i => i.id === itemId);
+            if (item && item.quantity > 1) {
+              cart.updateQuantity(itemId, item.quantity - 1);
+            }
+          });
+        });
+        
+        cartItems.querySelectorAll('.js-increase-qty').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const itemId = e.target.closest('[data-item-id]').dataset.itemId;
+            const item = cart.items.find(i => i.id === itemId);
+            if (item) {
+              cart.updateQuantity(itemId, item.quantity + 1);
+            }
+          });
+        });
+      }
+    }
+    
+    if (cartTotal) {
+      cartTotal.textContent = `$${this.getTotal().toLocaleString('es-AR')}`;
+    }
+  }
+}
+
+const cart = new Cart();
+
+document.querySelectorAll('.js-cart-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.js-cart-modal').classList.remove('hidden');
+    cart.updateCartUI();
+  });
+});
+
+document.querySelectorAll('.js-cart-close').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.js-cart-modal').classList.add('hidden');
+  });
+});
+
+// Finalizar compra por WhatsApp
+document.querySelector('.js-checkout-whatsapp')?.addEventListener('click', () => {
+  if (cart.items.length === 0) {
+    alert('Tu carrito está vacío');
+    return;
+  }
+  
+  // Generar mensaje del ticket
+  let message = '🛒 *PEDIDO DE CAFÉ*\n\n';
+  message += 'Hola! Quiero realizar el siguiente pedido:\n\n';
+  
+  cart.items.forEach((item, index) => {
+    message += `${index + 1}. *${item.name}*\n`;
+    message += `   - Tamaño: ${item.size === 250 ? '250gr' : '1kg'}\n`;
+    message += `   - Molienda: ${item.grind || 'Sin molienda'}\n`;
+    message += `   - Cantidad: ${item.quantity}\n`;
+    message += `   - Precio: $${item.total.toLocaleString('es-AR')}\n\n`;
+  });
+  
+  message += `*TOTAL: $${cart.getTotal().toLocaleString('es-AR')}*\n\n`;
+  message += 'Gracias!';
+  
+  // Codificar mensaje para URL
+  const encodedMessage = encodeURIComponent(message);
+  const phoneNumber = '5493518014893'; // +54 9 3518 01-4893 sin espacios y guiones
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  
+  // Abrir WhatsApp
+  window.open(whatsappUrl, '_blank');
+});
+</script>
+<a class="fixed bottom-6 right-6 bg-[#25D366] text-gray-900 w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#128C7E] transition-colors z-50" href="https://wa.me/1234567890" rel="noopener noreferrer" target="_blank">
   <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
   </svg>
