@@ -140,53 +140,57 @@
 </div>
 </div>
 <div class="max-w-5xl mx-auto" id="contact-form">
-<div class="border border-gray-700 bg-gray-900 rounded-lg overflow-hidden flex flex-col md:flex-row shadow-sm">
+<div class="group border border-gray-200 group-hover:border-gray-300 bg-white group-hover:bg-stone-50 rounded-lg overflow-hidden flex flex-col md:flex-row shadow-sm group-hover:shadow-md transition-all duration-300 cursor-pointer">
 <div class="w-full md:w-3/5 p-8 md:p-16 flex flex-col gap-10">
 <div>
-<h2 class="text-2xl font-medium text-white mb-2 tracking-tight">Comienza a trabajar con nosotros</h2>
-<p class="text-gray-400 font-mono text-xs tracking-wide uppercase">Registro de Cuenta</p>
+<h2 class="text-2xl font-medium text-gray-900 mb-2 tracking-tight transition-colors duration-300">Comienza a trabajar con nosotros</h2>
+
 </div>
 <form class="flex flex-col gap-6">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 <label class="flex flex-col gap-2">
-<span class="text-xs font-semibold uppercase tracking-wider text-white">Nombre completo</span>
-<input class="w-full rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-gray-500 focus:ring-1 focus:ring-gray-500 h-11 px-3 text-sm" placeholder="Juan Pérez" type="text"/>
+<span class="text-xs font-semibold uppercase tracking-wider text-gray-900 transition-colors duration-300">Nombre completo</span>
+<input class="w-full rounded border border-gray-300 group-hover:border-gray-400 bg-white group-hover:bg-gray-100 text-gray-900 placeholder-gray-400 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 h-11 px-3 text-sm transition-all duration-300" placeholder="Juan Pérez" type="text"/>
 </label>
 <label class="flex flex-col gap-2">
-<span class="text-xs font-semibold uppercase tracking-wider text-white">Empresa</span>
-<input class="w-full rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-gray-500 focus:ring-1 focus:ring-gray-500 h-11 px-3 text-sm" placeholder="Café del Centro" type="text"/>
+<span class="text-xs font-semibold uppercase tracking-wider text-gray-900 transition-colors duration-300">Empresa</span>
+<input class="w-full rounded border border-gray-300 group-hover:border-gray-400 bg-white group-hover:bg-gray-100 text-gray-900 placeholder-gray-400 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 h-11 px-3 text-sm transition-all duration-300" placeholder="Café del Centro" type="text"/>
 </label>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 <label class="flex flex-col gap-2">
-<span class="text-xs font-semibold uppercase tracking-wider text-white">Email</span>
-<input class="w-full rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-gray-500 focus:ring-1 focus:ring-gray-500 h-11 px-3 text-sm" placeholder="contacto@tuempresa.com" type="email"/>
+<span class="text-xs font-semibold uppercase tracking-wider text-gray-900 transition-colors duration-300">Email</span>
+<input class="w-full rounded border border-gray-300 group-hover:border-gray-400 bg-white group-hover:bg-gray-100 text-gray-900 placeholder-gray-400 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 h-11 px-3 text-sm transition-all duration-300" placeholder="contacto@tuempresa.com" type="email"/>
 </label>
 <label class="flex flex-col gap-2">
-<span class="text-xs font-semibold uppercase tracking-wider text-white">Teléfono</span>
-<input class="w-full rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-gray-500 focus:ring-1 focus:ring-gray-500 h-11 px-3 text-sm" placeholder="+54 11 ..." type="tel"/>
+<span class="text-xs font-semibold uppercase tracking-wider text-gray-900 transition-colors duration-300">Teléfono</span>
+<input class="w-full rounded border border-gray-300 group-hover:border-gray-400 bg-white group-hover:bg-gray-100 text-gray-900 placeholder-gray-400 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 h-11 px-3 text-sm transition-all duration-300" placeholder="+54 11 ..." type="tel"/>
 </label>
 </div>
 <label class="flex flex-col gap-2">
-<span class="text-xs font-semibold uppercase tracking-wider text-white">¿Cómo podemos ayudarte?</span>
-<textarea class="w-full rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-gray-500 focus:ring-1 focus:ring-gray-500 min-h-[120px] p-3 text-sm resize-y" placeholder="Cuéntanos sobre tu negocio..."></textarea>
+<span class="text-xs font-semibold uppercase tracking-wider text-gray-900 transition-colors duration-300">¿Cómo podemos ayudarte?</span>
+<textarea class="w-full rounded border border-gray-300 group-hover:border-gray-400 bg-white group-hover:bg-gray-100 text-gray-900 placeholder-gray-400 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 min-h-[120px] p-3 text-sm resize-y transition-all duration-300" placeholder="Cuéntanos sobre tu negocio..."></textarea>
 </label>
 <button class="mt-4 w-full sm:w-auto self-start px-8 h-11 bg-gray-900 text-white text-sm font-bold uppercase tracking-wider rounded hover:bg-black transition-colors shadow-md hover:shadow-lg" type="submit">
                         Enviar Solicitud
                     </button>
 </form>
 </div>
-<div class="w-full md:w-2/5 bg-gray-800 text-white p-8 md:p-16 flex flex-col justify-between">
+<div class="w-full md:w-2/5 relative bg-gray-50 group-hover:bg-gray-200 border-l border-gray-200 group-hover:border-gray-300 text-gray-900 overflow-hidden transition-all duration-300">
+<div class="absolute inset-0">
+<img src="../assets/images/wholesaleImage.jpg" alt="Mayoristas" class="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"/>
+</div>
+<div class="relative z-10 p-8 md:p-16 flex flex-col justify-between h-full">
 <div>
-<h3 class="font-mono text-xs uppercase tracking-[0.2em] mb-8 opacity-70 text-gray-400">Contacto Directo</h3>
+<h3 class="font-mono text-xs uppercase tracking-[0.2em] mb-8 text-gray-600 transition-colors duration-300">Contacto Directo</h3>
 <ul class="flex flex-col gap-8">
 <li class="flex flex-col gap-1">
-<p class="text-xs text-gray-400 uppercase tracking-wide">Ventas Mayoristas</p>
-<a class="font-medium hover:text-gray-300 transition-colors text-lg text-white" href="mailto:mayoristas@coffeeshop.com">oritostadores@gmail.com</a>
+<p class="text-xs text-gray-600 uppercase tracking-wide transition-colors duration-300">Ventas Mayoristas</p>
+<a class="font-medium hover:text-gray-900 transition-colors text-lg text-gray-900" href="mailto:oritostadores@gmail.com">oritostadores@gmail.com</a>
 </li>
 <li class="flex flex-col gap-1">
-<p class="text-xs text-gray-400 uppercase tracking-wide">Teléfono</p>
-<a class="font-medium hover:text-gray-300 transition-colors text-lg text-white" href="tel:+1234567890">+54 9 3518 01-4893</a>
+<p class="text-xs text-gray-600 uppercase tracking-wide transition-colors duration-300">Teléfono</p>
+<a class="font-medium hover:text-gray-900 transition-colors text-lg text-gray-900" href="tel:+5493518014893">+54 9 3518 01-4893</a>
 </li>
 <li class="flex flex-col gap-1">
 
@@ -194,7 +198,8 @@
 </ul>
 </div>
 <div class="mt-12">
-<p class="text-sm text-gray-400 italic">"El secreto de un gran negocio empieza con un gran café."</p>
+<p class="text-sm text-gray-600 italic transition-colors duration-300">"El secreto de un gran negocio empieza con un gran café."</p>
+</div>
 </div>
 </div>
 </div>
