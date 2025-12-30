@@ -2,24 +2,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.js-mobile-menu-toggle');
   const menuClose = document.querySelector('.js-mobile-menu-close');
   const mobileMenu = document.querySelector('.js-mobile-menu');
+  const backdrop = document.querySelector('.js-mobile-menu-backdrop');
   
   if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       mobileMenu.classList.remove('hidden');
+      mobileMenu.style.display = 'block';
+      document.body.style.overflow = 'hidden';
     });
   }
   
   if (menuClose && mobileMenu) {
-    menuClose.addEventListener('click', () => {
+    menuClose.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       mobileMenu.classList.add('hidden');
+      mobileMenu.style.display = 'none';
+      document.body.style.overflow = '';
     });
   }
   
-  if (mobileMenu) {
-    mobileMenu.addEventListener('click', (e) => {
-      if (e.target === mobileMenu || e.target.classList.contains('backdrop-blur-sm')) {
-        mobileMenu.classList.add('hidden');
-      }
+  if (backdrop && mobileMenu) {
+    backdrop.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      mobileMenu.classList.add('hidden');
+      mobileMenu.style.display = 'none';
+      document.body.style.overflow = '';
     });
   }
 });
