@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Codificar mensaje para URL
     const encodedMessage = encodeURIComponent(message);
-    const phoneNumber = '5493518014893';
+    const phoneNumber = '543513053755';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
     // Abrir WhatsApp
