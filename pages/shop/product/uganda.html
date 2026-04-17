@@ -130,7 +130,7 @@
 <div class="mb-10">
 <h1 class="text-2xl lg:text-3xl font-sans uppercase font-medium leading-snug mb-8">
   Uganda - Natural anaeróbico<br/>
-  <span class="js-product-title-price">$30.000</span>
+  <span class="js-product-title-price">$33.000</span>
                     </h1>
 <div class="font-mono text-sm tracking-tight mb-8 text-gray-600">
 <p class="uppercase">FERMENTO</p>
@@ -138,7 +138,7 @@
 </div>
 
 </div>
-<div class="border-t border-gray-200 font-mono text-sm js-product-options" data-price-250="30000" data-price-1000="85000" data-product-name="Uganda - Natural anaeróbico" data-product-id="uganda">
+<div class="border-t border-gray-200 font-mono text-sm js-product-options" data-price-200="33000" data-price-1000="85000" data-product-name="Uganda - Natural anaeróbico" data-product-id="uganda">
 <div class="flex flex-col gap-2 py-4 border-b border-gray-200">
 <label class="text-gray-600 text-xs uppercase tracking-widest">Molienda</label>
 <select class="bg-transparent border border-gray-200 text-sm px-3 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-900 js-size-grind-select">
@@ -156,13 +156,13 @@
 <div class="flex flex-col gap-2 py-4 border-b border-gray-200">
 <label class="text-gray-600 text-xs uppercase tracking-widest">Cantidad</label>
 <select class="bg-transparent border border-gray-200 text-sm px-3 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-900 js-size-select">
-<option value="250" selected class="bg-white text-gray-900">250gr</option>
+<option value="200" selected class="bg-white text-gray-900">200gr</option>
 <!-- <option value="1000" class="bg-white text-gray-900">1 kg</option> -->
 </select>
 </div>
 <div class="flex justify-between items-center py-4 border-b border-gray-200">
 <span class="text-gray-600">TOTAL:</span>
-<span class="text-right text-lg font-bold js-price">$30.000</span>
+<span class="text-right text-lg font-bold js-price">$33.000</span>
 </div>
 </div>
 <div class="mt-10 grid grid-cols-2 gap-4">
@@ -180,7 +180,7 @@
 <section class="py-12 bg-white">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <p class="text-gray-700 font-light leading-relaxed mb-8">
-      Esta especie poco común revela una dulzura delicada que recuerda al azúcar glasé, suavizada por notas de papaya y melón. Su dulzor es extraordinariamente alto, equilibrado con una acidez muy baja y sin rastro de amargor. El cuerpo es sedoso y aterciopelado, probablemente de las texturas más suaves que se pueden encontrar en un café. Con su contenido naturalmente bajo en cafeína, la taza resulta singular: un raro encuentro de dulzura, seda y fruta.
+      Desde las tierras altas de Kisinga, Uganda, llega un café procesado de forma natural anaeróbica que explota en frutos rojos desde el primer sorbo. La taza arranca con frutilla y frambuesa bien definidas, se desarrolla hacia una ciruela madura y profunda, y cierra con un dulzor denso que recuerda al almíbar, dejando un final ligeramente avinado. Es un café intenso, expresivo y con mucho carácter: para quienes buscan algo fuera de lo convencional.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
       <div class="space-y-4">
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const qtyMinus = document.querySelector('.js-qty-minus');
   const priceDisplay = document.querySelector('.js-price');
   
-  const price250 = parseInt(productOptions.getAttribute('data-price-250'));
+  const price200 = parseInt(productOptions.getAttribute('data-price-200'));
   const price1000 = parseInt(productOptions.getAttribute('data-price-1000'));
   
   const updatePrice = () => {
@@ -262,8 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const quantity = parseInt(quantityInput.value) || 1;
     
     let basePrice = 0;
-    if (size === 250) {
-      basePrice = price250;
+    if (size === 200) {
+      basePrice = price200;
     } else if (size === 1000) {
       basePrice = price1000;
     }
@@ -298,8 +298,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const size = parseInt(sizeSelect.value);
       const quantity = parseInt(quantityInput.value) || 1;
       let basePrice = 0;
-      if (size === 250) {
-        basePrice = price250;
+      if (size === 200) {
+        basePrice = price200;
       } else if (size === 1000) {
         basePrice = price1000;
       }
