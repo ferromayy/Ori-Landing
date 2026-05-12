@@ -16,6 +16,9 @@ class Cart {
   }
 
   addItem(product) {
+    const discount = product.discount || 0;
+    const discountedPrice = discount > 0 ? Math.round(product.price * (1 - discount / 100)) : product.price;
+
     const item = {
       id: `${product.productId}-${product.size}-${product.grind}`,
       productId: product.productId,
@@ -23,8 +26,10 @@ class Cart {
       size: product.size,
       grind: product.grind,
       quantity: product.quantity,
-      price: product.price,
-      total: product.price * product.quantity
+      originalPrice: product.price,
+      discount: discount,
+      price: discountedPrice,
+      total: discountedPrice * product.quantity
     };
     
     const existingIndex = this.items.findIndex(i => i.id === item.id);
@@ -79,12 +84,23 @@ class Cart {
       if (this.items.length === 0) {
         cartItems.innerHTML = '<p class="text-gray-600 text-center py-8">Tu carrito está vacío</p>';
       } else {
-        cartItems.innerHTML = this.items.map(item => `
+        cartItems.innerHTML = this.items.map(item => {
+          const sizeLabel = item.size === 1000 ? '1kg' : item.size + 'gr';
+          const originalTotal = (item.originalPrice || item.price) * item.quantity;
+          const hasDiscount = item.discount && item.discount > 0;
+          const priceHtml = hasDiscount
+            ? `<span class="line-through text-gray-400 text-sm mr-2">$${originalTotal.toLocaleString('es-AR')}</span><span class="font-medium text-gray-900">$${item.total.toLocaleString('es-AR')}</span>`
+            : `<span class="font-medium text-gray-900">$${item.total.toLocaleString('es-AR')}</span>`;
+          const discountBadge = hasDiscount
+            ? `<span class="bg-black text-white text-[10px] font-bold px-1.5 py-0.5 rounded ml-2">${item.discount}% OFF</span>`
+            : '';
+
+          return `
           <div class="border-b border-gray-200 pb-4 mb-4">
             <div class="flex justify-between items-start mb-2">
               <div class="flex-1">
-                <h3 class="font-medium mb-1 text-gray-900">${item.name}</h3>
-                <p class="text-xs text-gray-600">${item.size === 250 ? '250gr' : '1kg'} - ${item.grind || 'Sin molienda'}</p>
+                <h3 class="font-medium mb-1 text-gray-900">${item.name}${discountBadge}</h3>
+                <p class="text-xs text-gray-600">${sizeLabel} - ${item.grind || 'Sin molienda'}</p>
               </div>
               <button class="text-gray-600 hover:text-gray-900 js-remove-item" data-item-id="${item.id}" type="button">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,10 +114,10 @@ class Cart {
                 <span class="text-sm text-gray-900">${item.quantity}</span>
                 <button class="w-6 h-6 flex items-center justify-center border border-gray-300 hover:bg-gray-100 text-gray-700 js-increase-qty" data-item-id="${item.id}" type="button">+</button>
               </div>
-              <span class="font-medium text-gray-900">$${item.total.toLocaleString('es-AR')}</span>
+              ${priceHtml}
             </div>
           </div>
-        `).join('');
+        `}).join('');
         
         cartItems.querySelectorAll('.js-remove-item').forEach(btn => {
           btn.addEventListener('click', (e) => {
@@ -167,11 +183,19 @@ document.addEventListener('DOMContentLoaded', () => {
     message += 'Hola! Quiero realizar el siguiente pedido:\n\n';
     
     cart.items.forEach((item, index) => {
+      const sizeLabel = item.size === 1000 ? '1kg' : item.size + 'gr';
       message += `${index + 1}. *${item.name}*\n`;
-      message += `   - Tamaño: ${item.size === 250 ? '250gr' : '1kg'}\n`;
+      message += `   - Tamaño: ${sizeLabel}\n`;
       message += `   - Molienda: ${item.grind || 'Sin molienda'}\n`;
       message += `   - Cantidad: ${item.quantity}\n`;
-      message += `   - Precio: $${item.total.toLocaleString('es-AR')}\n\n`;
+      if (item.discount && item.discount > 0) {
+        const originalTotal = (item.originalPrice || item.price) * item.quantity;
+        message += `   - Precio original: ~$${originalTotal.toLocaleString('es-AR')}~\n`;
+        message += `   - Descuento: ${item.discount}% OFF\n`;
+        message += `   - Precio final: $${item.total.toLocaleString('es-AR')}\n\n`;
+      } else {
+        message += `   - Precio: $${item.total.toLocaleString('es-AR')}\n\n`;
+      }
     });
     
     message += `*TOTAL: $${cart.getTotal().toLocaleString('es-AR')}*\n\n`;
