@@ -134,11 +134,10 @@
                     </h1>
 <div class="font-mono text-sm tracking-tight mb-8 text-gray-600">
 <p class="uppercase">FRUTO</p>
-<p class="text-gray-900 font-semibold uppercase tracking-widest mt-2">15% OFF</p>
 </div>
 
 </div>
-<div class="border-t border-gray-200 font-mono text-sm js-product-options" data-price-250="23000" data-price-1000="70000" data-product-name="Brasil - Natural" data-product-id="brasil" data-discount="15">
+<div class="border-t border-gray-200 font-mono text-sm js-product-options" data-price-250="23000" data-price-1000="70000" data-product-name="Brasil - Natural" data-product-id="brasil">
 <div class="flex flex-col gap-2 py-4 border-b border-gray-200">
 <label class="text-gray-600 text-xs uppercase tracking-widest">Molienda</label>
 <select class="bg-transparent border border-gray-200 text-sm px-3 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-900 js-size-grind-select">
@@ -368,17 +367,13 @@ document.querySelector('.js-add-to-cart')?.addEventListener('click', () => {
   const priceText = priceDisplay.textContent.replace('$', '').replace(/\./g, '');
   const price = parseInt(priceText) / quantity; // Precio unitario
   
-  const discountAttr = parseInt(productOptions.getAttribute('data-discount')) || 0;
-  const discount = size <= 250 ? discountAttr : 0;
-
   cart.addItem({
     productId,
     name: productName,
     size,
     grind,
     quantity,
-    price,
-    discount
+    price
   });
 
   document.querySelector('.js-cart-modal').classList.remove('hidden');
